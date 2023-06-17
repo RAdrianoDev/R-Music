@@ -28,8 +28,8 @@ void ShowMenuOptions()
     Console.WriteLine("\nType 1 to record a singer");
     Console.WriteLine("Type 2 to show all singers");
     Console.WriteLine("Type 3 to evaluate a singer");
-    Console.WriteLine("Type 4 to show the singer's average");
-    Console.WriteLine("Type -1 to exit");
+    Console.WriteLine("Type 4 to show the singer's average rating");
+    Console.WriteLine("Type 0 to exit");
 
     Console.Write("\nType your option: ");
     string typedOption = Console.ReadLine()!;
@@ -45,9 +45,11 @@ void ShowMenuOptions()
             break;
             case 4: SingerAverage();//Console.WriteLine("You trype option " + typedOptionNumber);
             break;
-            case -1: Console.WriteLine("Thank you for using Screen Sound! ");
+            case 0: Console.WriteLine("Thank you for using Screen Sound! ");
+            Thread.Sleep(3000);
             break;
             default: Console.WriteLine("Invalid Option");
+            Thread.Sleep(3000);
             break;
     }
 }
@@ -151,5 +153,4 @@ void SingerAverage()
     }
 }
 
-//ShowLogo();
 ShowMenuOptions();
